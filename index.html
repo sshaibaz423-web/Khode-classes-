@@ -1,1 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Khode Classes - Class 11 & 12 Science Batch. Expert teaching by Akash Khode.">
+<meta name="keywords" content="Khode Classes, Akash Khode, Class 11 Science, Class 12 Science, Science Batch">
+
+<title>Khode Classes | 11th & 12th Science</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f9fc;
+    color:#172033;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 3px 18px rgba(0,0,0,.08);
+    padding:15px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#4f46e5;
+}
+
+.logo span{
+    color:#111827;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#4f46e5;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    padding:80px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    background:linear-gradient(135deg,#eef2ff,#fff);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    background:#e0e7ff;
+    color:#4338ca;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#4f46e5;
+}
+
+.hero p{
+    color:#64748b;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.primary{
+    background:#4f46e5;
+    color:white;
+}
+
+.primary:hover{
+    background:#4338ca;
+}
+
+.secondary{
+    border:2px solid #4f46e5;
+    color:#4f46e5;
+    background:#fff;
+}
+
+/* HERO CARD */
+
+.hero-card{
+    width:390px;
+    background:white;
+    padding:38px 30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 55px rgba(79,70,229,.18);
+}
+
+.hero-icon{
+    font-size:80px;
+    margin-bottom:15px;
+}
+
+.hero-card h2{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.hero-card p{
+    margin:8px 0;
+    font-size:15px;
+}
+
+.science{
+    display:inline-block;
+    margin-top:15px;
+    padding:9px 15px;
+    border-radius:20px;
+    background:#eef2ff;
+    color:#4338ca;
+    font-weight:bold;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px 7%;
+    background:#fff;
+}
+
+.info-box{
+    padding:14px 22px;
+    border-radius:12px;
+    background:#f8fafc;
+    font-weight:bold;
+}
+
+.info-box a{
+    color:#4f46e5;
+    text-decoration:none;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:white;
+    padding:45px 7%;
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    color:#4f46e5;
+    font-size:35px;
+    margin-bottom:5px;
+}
+
+.stat p{
+    color:#64748b;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#64748b;
+}
+
+/* COURSES */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.course{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.course:hover{
+    transform:translateY(-6px);
+}
+
+.course-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.course h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.course p{
+    color:#64748b;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.course-tag{
+    display:inline-block;
+    background:#eef2ff;
+    color:#4338ca;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* WHY US */
+
+.features{
+    background:#111827;
+    color:white;
+}
+
+.features .section-title p{
+    color:#cbd5e1;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.feature{
+    background:#1f2937;
+    padding:27px;
+    border-radius:16px;
+}
+
+.feature-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* TEACHER */
+
+.teacher-section{
+    background:#f7f9fc;
+}
+
+.teacher-card{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.teacher-photo{
+    width:120px;
+    height:120px;
+    margin:auto;
+    margin-bottom:18px;
+    border-radius:50%;
+    background:#e0e7ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+}
+
+.teacher-card h2{
+    color:#4f46e5;
+    margin-bottom:8px;
+}
+
+.teacher-card .role{
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.teacher-card p{
+    color:#64748b;
+    line-height:1.7;
+}
+
+/* BATCH */
+
+.batch{
+    background:#eef2ff;
+}
+
+.batch-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 10px 35px rgba(0,0,0,.07);
+}
+
+.batch-row{
+    display:flex;
+    justify-content:space-between;
+    padding:16px 0;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.batch-row:last-child{
+    border-bottom:none;
+}
+
+.batch-row strong{
+    color:#4f46e5;
+}
+
+/* RESULTS */
+
+.results{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.result{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.result-icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.result h3{
+    margin-bottom:8px;
+}
+
+.result p{
+    color:#64748b;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#4f46e5;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    max-width:650px;
+    margin:0 auto 25px;
+    line-height:1.7;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.contact-btn{
+    background:white;
+    color:#4f46e5;
+    padding:14px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.contact-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:35px 7%;
+}
+
+footer h2{
+    color:white;
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#94a3b8;
+    margin-top:8px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 6px 25px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        gap:0;
+        padding:10px 0;
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        padding:13px;
+        text-align:center;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:60px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .hero-card{
+        width:100%;
+        max-width:390px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .courses,
+    .feature-grid,
+    .results{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .batch-row{
+        gap:15px;
+    }
+
+    .batch-row span,
+    .batch-row strong{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+    Khode <span>Classes</span>
+</div>
+
+<ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#teacher">Faculty</a></li>
+    <li><a href="#batch">Batch</a></li>
+    <li><a href="#results">Benefits</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<div class="badge">
+    🎓 Admissions Open
+</div>
+
+<h1>
+    Khode Classes<br>
+    <span>11th & 12th Science</span>
+</h1>
+
+<p>
+    Build strong concepts, improve your preparation
+    and achieve your academic goals with
+    expert guidance from Akash Khode.
+</p>
+
+<div class="buttons">
+
+<a href="#courses" class="btn primary">
+    📚 View Courses
+</a>
+
+<a href="tel:+918080510315" class="btn secondary">
+    📞 Call 8080510315
+</a>
+
+<a href="https://wa.me/918080510315?text=Hello%20Akash%20Khode%2C%20I%20want%20information%20about%20Khode%20Classes."
+class="btn secondary"
+target="_blank">
+    💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-icon">🏫</div>
+
+<h2>Khode Classes</h2>
+
+<p><strong>👨‍🏫 Teacher:</strong> Akash Khode</p>
+
+<p><strong>📚 Course:</strong> Class 11 & 12</p>
+
+<p><strong>🧪 Stream:</strong> Science</p>
+
+<span class="science">
+    🧪 Science Batch
+</span>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT INFO -->
+
+<div class="contact-info">
+
+<div class="info-box">
+    👨‍🏫 Akash Khode
+</div>
+
+<div class="info-box">
+    📞 <a href="tel:+918080510315">8080510315</a>
+</div>
+
+<div class="info-box">
+    🎓 Admissions Open
+</div>
+
+<div class="info-box">
+    🧪 Science Batch
+</div>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat">
+    <h2>11th</h2>
+    <p>📚 Science</p>
+</div>
+
+<div class="stat">
+    <h2>12th</h2>
+    <p>📚 Science</p>
+</div>
+
+<div class="stat">
+    <h2>1:1</h2>
+    <p>Student Guidance</p>
+</div>
+
+<div class="stat">
+    <h2>100%</h2>
+    <p>Focus on Concepts</p>
+</div>
+
+</div>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<div class="section-title">
+
+<h2>Our Courses</h2>
+
+<p>
+    Specialised learning for Class 11 & 12 Science students.
+</p>
+
+</div>
+
+
+<div class="courses">
+
+<div class="course">
+
+<div class="course-icon">🔬</div>
+
+<h3>Class 11 Science</h3>
+
+<p>
+    Strong foundation for Class 11 Science
+    with concept-based teaching, practice
+    and regular revision.
+</p>
+
+<span class="course-tag">
+    SCIENCE BATCH
+</span>
+
+</div>
+
+
+<div class="course">
+
+<div class="course-icon">🎯</div>
+
+<h3>Class 12 Science</h3>
+
+<p>
+    Complete Class 12 Science preparation
+    with focused academic guidance,
+    revision and exam preparation.
+</p>
+
+<span class="course-tag">
+    SCIENCE BATCH
+</span>
+
+</div>
+
+
+<div class="course">
+
+<div class="course-icon">📐</div>
+
+<h3>Mathematics</h3>
+
+<p>
+    Concept clarity, problem solving
+    and regular practice for Science students.
+</p>
+
+<span class="course-tag">
+    CLASS 11 & 12
+</span>
+
+</div>
+
+
+<div class="course">
+
+<div class="course-icon">🧪</div>
+
+<h3>Science Preparation</h3>
+
+<p>
+    Focused preparation with notes,
+    practice questions and doubt solving.
+</p>
+
+<span class="course-tag">
+    CLASS 11 & 12
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY KHODE -->
+
+<section class="features">
+
+<div class="section-title">
+
+<h2>Why Choose Khode Classes?</h2>
+
+<p>
+    A focused learning environment for Science students.
+</p>
+
+</div>
+
+
+<div class="feature-grid">
+
+<div class="feature">
+    <div class="feature-icon">👨‍🏫</div>
+    <h3>Expert Guidance</h3>
+    <p>
+        Learn with personal guidance from
+        Akash Khode.
+    </p>
+</div>
+
+
+<div class="feature">
+    <div class="feature-icon">💡</div>
+    <h3>Concept Clarity</h3>
+    <p>
+        Difficult topics are explained in
+        a simple and understandable way.
+    </p>
+</div>
+
+
+<div class="feature">
+    <div class="feature-icon">📝</div>
+    <h3>Regular Practice</h3>
+    <p>
+        Practice questions help students
+        strengthen their preparation.
+    </p>
+</div>
+
+
+<div class="feature">
+    <div class="feature-icon">❓</div>
+    <h3>Doubt Solving</h3>
+    <p>
+        Get your academic doubts cleared
+        with proper guidance.
+    </p>
+</div>
+
+
+<div class="feature">
+    <div class="feature-icon">📖</div>
+    <h3>Study Material</h3>
+    <p>
+        Useful notes and learning material
+        for better preparation.
+    </p>
+</div>
+
+
+<div class="feature">
+    <div class="feature-icon">🏆</div>
+    <h3>Result Focused</h3>
+    <p>
+        Consistent preparation with focus
+        on academic improvement.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEACHER -->
+
+<section id="teacher" class="teacher-section">
+
+<div class="section-title">
+
+<h2>Meet Our Faculty</h2>
+
+<p>
+    Guidance that helps students move forward.
+</p>
+
+</div>
+
+
+<div class="teacher-card">
+
+<div class="teacher-photo">
+    👨‍🏫
+</div>
+
+<h2>Akash Khode</h2>
+
+<div class="role">
+    Faculty — Khode Classes
+</div>
+
+<p>
+    Specialised guidance for Class 11 & 12
+    Science students with a focus on concepts,
+    practice and academic preparation.
+</p>
+
+<br>
+
+<a href="tel:+918080510315"
+class="contact-btn">
+    📞 Call Akash Khode
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BATCH -->
+
+<section class="batch" id="batch">
+
+<div class="section-title">
+
+<h2>🧪 Science Batch</h2>
+
+<p>
+    🎓 Admissions Open — Class 11 & 12 Science
+</p>
+
+</div>
+
+
+<div class="batch-box">
+
+<div class="batch-row">
+    <span>🎓 Classes</span>
+    <strong>11th & 12th</strong>
+</div>
+
+<div class="batch-row">
+    <span>🧪 Stream</span>
+    <strong>Science</strong>
+</div>
+
+<div class="batch-row">
+    <span>👨‍🏫 Faculty</span>
+    <strong>Akash Khode</strong>
+</div>
+
+<div class="batch-row">
+    <span>📚 Learning</span>
+    <strong>Concept + Practice</strong>
+</div>
+
+<div class="batch-row">
+    <span>🎓 Admission</span>
+    <strong>Open</strong>
+</div>
+
+<div class="batch-row">
+    <span>📞 Contact</span>
+    <strong>8080510315</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESULTS / BENEFITS -->
+
+<section id="results">
+
+<div class="section-title">
+
+<h2>Student Benefits</h2>
+
+<p>
+    Everything students need for effective preparation.
+</p>
+
+</div>
+
+
+<div class="results">
+
+<div class="result">
+
+<div class="result-icon">📚</div>
+
+<h3>Better Concepts</h3>
+
+<p>
+    Understand topics instead of
+    simply memorising them.
+</p>
+
+</div>
+
+
+<div class="result">
+
+<div class="result-icon">📈</div>
+
+<h3>Better Preparation</h3>
+
+<p>
+    Regular practice and revision
+    help improve preparation.
+</p>
+
+</div>
+
+
+<div class="result">
+
+<div class="result-icon">🏆</div>
+
+<h3>Academic Growth</h3>
+
+<p>
+    Focus on consistent improvement
+    throughout the academic year.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Join Khode Classes 🚀</h2>
+
+<p>
+    🎓 Admissions Open for Class 11 & 12 Science Batch.
+    Contact Akash Khode for admission details,
+    batch information and other queries.
+</p>
+
+<div class="contact-buttons">
+
+<a href="tel:+918080510315"
+class="contact-btn">
+    📞 Call 8080510315
+</a>
+
+<a href="https://wa.me/918080510315?text=Hello%20Akash%20Khode%2C%20I%20want%20to%20join%20Khode%20Classes%20Science%20Batch."
+class="contact-btn"
+target="_blank">
+    💬 WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Khode Classes</h2>
+
+<p>
+    📚 Class 11 & 12 • 🧪 Science Batch
+</p>
+
+<p>
+    👨‍🏫 Faculty: Akash Khode
+</p>
+
+<p>
+    📞 8080510315
+</p>
+
+<p>
+    🎓 Admissions Open
+</p>
+
+<p>
+    © 2026 Khode Classes. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/918080510315?text=Hello%20Akash%20Khode%2C%20I%20want%20information%20about%20Khode%20Classes."
+class="whatsapp"
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+  </html>
